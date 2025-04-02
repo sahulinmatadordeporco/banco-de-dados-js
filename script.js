@@ -1,5 +1,6 @@
 const express = require('express')
-const {soma, subtração} = require('./teste')
+const {soma, subtração} = require('./teste1')
+const { get } = require('http')
 
 const server = express()
 
@@ -11,4 +12,8 @@ server.get('/soma', (req, res) => {
 })
 server.listen(PORT, ()=> {
     console.log(`Servidor rodando na porta ${PORT}`)
+})
+
+server.get ('/subtração', (req, res) => {
+    res.send; {'aqui vai o resultado da subtração'}
 })
